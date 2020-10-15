@@ -37,10 +37,10 @@ def deletar(id):
     conn.commit()
     conn.close()
 
-def update(id,title,recomenda,End,nota):
+def update(id,livro,recomenda,End,nota):
     conn=sqlite3.connect("bibliotecas.db")
     cur=conn.cursor()
-    cur.execute("UPDATE biblioteca SET livro=?  recomenda=?  End = ?  nota=?",(livro, recomenda, End, nota))
+    cur.execute("UPDATE biblioteca SET livro=? , recomenda=? , End = ? , nota=?",(livro, recomenda, End, nota))
     conn.commit()
     conn.close()
 
